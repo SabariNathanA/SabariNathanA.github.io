@@ -7,109 +7,101 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-    <div class="page-wrapper">
-        <header class="main-header">
-            <div class="brand">
-                <h1>Sabari Nathan Anbalagan</h1>
-                <p class="subtitle">Post-doctoral Researcher | Agentic AI, 6G & Industrial IoT</p>
-            </div>
-            <nav class="main-nav">
-                <a href="#about" class="active">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#publications">Publications</a>
-                <a href="#projects">Projects</a>
-                <a href="#">CV</a>
-            </nav>
-        </header>
-
-        <main class="content">
-            <!-- ABOUT SECTION -->
-            <section id="about">
-                <div class="about-container">
-                    <div class="about-text">
-                        <p>
-                            As a post-doctoral researcher with a background in computer science and network engineering, my passion lies in optimizing wireless networks for challenging environments. My Ph.D. work centered on AI- and non-AI-based optimization for 5G RedCap devices in Industrial IoT scenarios, while my current research explores sustainable and scalable network solutions for Beyond-5G and 6G.
-                        </p>
-                         <div class="social-links">
-                            <a href="mailto:sabarinathan94@gmail.com">Email</a>
-                            <a href="https://scholar.google.com/citations?user=RZScMEYAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                            <a href="https://www.linkedin.com/in/SabariNathan-A" target="_blank">LinkedIn</a>
-                            <a href="https://github.com/SabariNathanA" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://via.placeholder.com/150" alt="Sabari Nathan Anbalagan">
-                        <!-- TODO: Replace with your photo, preferably a square one -->
-                    </div>
+    <div class="wrapper">
+        <!-- ================== -->
+        <!--      SIDEBAR       -->
+        <!-- ================== -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="profile">
+                    <img src="https://via.placeholder.com/150" alt="Sabari Nathan Anbalagan">
+                    <!-- TODO: Replace with your actual photo -->
+                    <h1 class="name">Sabari Nathan Anbalagan</h1>
+                    <p class="title">Post-doctoral Researcher</p>
                 </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#biography" class="active"><i class="fas fa-user fa-fw"></i> Biography</a></li>
+                        <li><a href="#interests"><i class="fas fa-star fa-fw"></i> Interests</a></li>
+                        <li><a href="#education"><i class="fas fa-graduation-cap fa-fw"></i> Education</a></li>
+                        <li><a href="#experience"><i class="fas fa-briefcase fa-fw"></i> Experience</a></li>
+                        <li><a href="#publications"><i class="fas fa-book fa-fw"></i> Publications</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="social-footer">
+                    <a href="mailto:sabarinathan94@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://scholar.google.com/citations?user=RZScMEYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.linkedin.com/in/SabariNathan-A" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SabariNathanA" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ================== -->
+        <!--   MAIN CONTENT     -->
+        <!-- ================== -->
+        <main class="content">
+            <section id="biography">
+                <h2>Biography</h2>
+                <p>I am a post-doctoral researcher with a background in computer science engineering and a master's degree in Networking and Communication. My passion lies in optimizing wireless networks, especially in challenging environments. My master's research focused on graceful degradation for tactical battlefield networks, while my Ph.D. work centered on AI- and non-AI-based optimization for 5G RedCap/5G-NR Light devices in Industrial IoT scenarios.</p>
+                <p>Looking ahead, my research focuses on Beyond-5G and 6G networks. I aim to explore sustainable and scalable network solutions to advance interconnected digital, physical, and human worlds.</p>
             </section>
 
-            <hr>
-
-            <!-- EXPERIENCE SECTION -->
-            <section id="experience">
-                <h2>Experience & Education</h2>
-                <div class="experience-grid">
-                    <div class="experience-item">
-                        <div class="year">2024 - Present</div>
-                        <div class="description">
-                            <h3>Post-doctoral Researcher</h3>
-                            <p>University of Twente, The Netherlands</p>
-                        </div>
-                    </div>
-                    <div class="experience-item">
-                        <div class="year">2024 - Present</div>
-                        <div class="description">
-                            <h3>Applied Researcher</h3>
-                            <p>Inertia Technology, The Netherlands</p>
-                        </div>
-                    </div>
-                     <div class="experience-item">
-                        <div class="year">2018 - 2024</div>
-                        <div class="description">
-                            <h3>Doctor of Philosophy (Ph.D.)</h3>
-                            <p>University of Twente, The Netherlands</p>
-                        </div>
-                    </div>
-                     <div class="experience-item">
-                        <div class="year">2016 - 2018</div>
-                        <div class="description">
-                            <h3>Master of Technology (M.Tech)</h3>
-                            <p>IIIT Bangalore, India</p>
-                        </div>
-                    </div>
-                </div>
+            <section id="interests">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Agentic AI for Cyber-Physical Systems</li>
+                    <li>Beyond-5G & 6G Networks</li>
+                    <li>Industrial Internet of Things (IIoT)</li>
+                    <li>Reliable Wireless Communication</li>
+                </ul>
             </section>
             
-            <hr>
-
-            <!-- PUBLICATIONS SECTION -->
-            <section id="publications">
-                <h2>Selected Publications</h2>
-                <div class="publication-list">
-                    <div class="publication-item">
-                        <h3>Fine Grained vs Coarse Grained Channel Quality Prediction: A 5G-RedCap Perspective</h3>
-                        <p>SN Anbalagan, A Chiumento, PJM Havinga (2024)</p>
-                        <a href="#">[PDF]</a> <a href="#">[Details]</a>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="entry">
+                        <div class="title">Ph.D. in Computer Science</div>
+                        <div class="details">
+                            <p>University of Twente, The Netherlands</p>
+                            <p class="date">2018 - 2024</p>
+                        </div>
                     </div>
-                     <div class="publication-item">
-                        <h3>VarOLLA: Maximizing Throughput for 5G-RedCap Devices in IIoT Networks</h3>
-                        <p>SN Anbalagan, A Chiumento, PJM Havinga (2023)</p>
-                         <a href="#">[PDF]</a> <a href="#">[Details]</a>
+                    <div class="entry">
+                        <div class="title">M.Tech in Information Technology</div>
+                        <div class="details">
+                            <p>IIIT Bangalore, India</p>
+                            <p class="date">2016 - 2018</p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="title">B.Tech in Information Technology</div>
+                        <div class="details">
+                            <p>Easwari Engineering College, India</p>
+                            <p class="date">2011 - 2015</p>
+                        </div>
                     </div>
                 </div>
-                <a href="#" class="see-all">See all publications →</a>
             </section>
+
+            <!-- You can add more sections like experience, publications, etc. here -->
+             <section id="contact">
+                <h2>Contact</h2>
+                <p>Please feel free to reach out via email for collaborations or inquiries.</p>
+                <a href="mailto:sabarinathan94@gmail.com" class="btn">sabarinathan94@gmail.com</a>
+            </section>
+
         </main>
-
-        <footer class="main-footer">
-            <p>© 2025 Sabari Nathan Anbalagan</p>
-        </footer>
     </div>
-
+<script src="script.js"></script>
 </body>
 </html>
