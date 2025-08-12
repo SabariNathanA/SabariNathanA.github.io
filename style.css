@@ -1,151 +1,191 @@
-/* --- GLOBAL STYLES & FONT-FACE --- */
+/* --- GLOBAL STYLES & VARIABLES --- */
 :root {
-    --text-primary: #333333; /* A softer black for text */
-    --text-secondary: #5c5c5c;
-    --accent-color: #483D8B; /* Dark Slate Blue - professional and unique */
-    --bg-color: #FFFFFF;
-    --border-color: #EAEAEA;
-    --font-serif: 'Lora', serif; /* A beautiful serif for headings */
-    --font-sans: 'Source Sans Pro', sans-serif; /* A clean sans-serif for body */
+    --primary-color: #007bff; /* A standard, professional blue */
+    --text-color: #343a40;
+    --secondary-text: #6c757d;
+    --bg-color: #f8f9fa;
+    --sidebar-bg: #ffffff;
+    --border-color: #dee2e6;
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-primary);
+    color: var(--text-color);
     background-color: var(--bg-color);
-    color: var(--text-primary);
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.page-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-}
-
-h1, h2, h3 {
-    font-family: var(--font-serif);
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1.5rem; }
-h3 { font-size: 1.2rem; font-family: var(--font-sans); font-weight: 600; }
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 3rem 0;
-}
-
-/* --- HEADER --- */
-.main-header {
-    margin-bottom: 3rem;
-}
-.subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
     margin: 0;
 }
-.main-nav {
-    margin-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.75rem 0;
-}
-.main-nav a {
-    margin-right: 1.5rem;
-    font-weight: 600;
-}
-.main-nav a.active {
-    color: var(--text-primary);
-    text-decoration: none;
-}
 
-/* --- ABOUT SECTION --- */
-.about-container {
+.wrapper {
     display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-}
-.about-text { flex: 1; }
-.about-text p { margin-top: 0; }
-.about-image img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 5px;
-}
-.social-links a {
-    margin-right: 1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    min-height: 100vh;
 }
 
-/* --- EXPERIENCE SECTION --- */
-.experience-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+/* ================== */
+/*      SIDEBAR       */
+/* ================== */
+.sidebar {
+    flex: 0 0 300px; /* Sidebar will not grow or shrink, fixed at 300px */
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto; /* Allow sidebar to scroll if content is too long */
 }
-.experience-item {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 1rem;
-    align-items: baseline;
-}
-.experience-item .year {
-    color: var(--text-secondary);
-    font-weight: 600;
-}
-.experience-item p {
-    color: var(--text-secondary);
-    margin: 0;
+.sidebar-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* --- PUBLICATIONS SECTION --- */
-.publication-list .publication-item {
-    margin-bottom: 1.5rem;
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
 }
-.publication-item p {
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 5px solid var(--bg-color);
+}
+.profile .name {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
     margin: 0;
-    color: var(--text-secondary);
 }
-.publication-item a {
-    font-size: 0.9rem;
+.profile .title {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin: 0.25rem 0 0 0;
+}
+
+.main-nav {
+    flex-grow: 1; /* Pushes the social footer to the bottom */
+}
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main-nav li a {
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--secondary-text);
+    text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s ease;
+}
+.main-nav li a:hover,
+.main-nav li a.active {
+    color: var(--text-color);
+}
+.main-nav .fa-fw {
+    width: 1.28em;
+    text-align: center;
     margin-right: 0.5rem;
 }
-.see-all {
-    font-weight: 600;
+
+.social-footer {
+    text-align: center;
+    padding-top: 1rem;
+}
+.social-footer a {
+    color: var(--secondary-text);
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+.social-footer a:hover {
+    color: var(--primary-color);
 }
 
+/* ================== */
+/*   MAIN CONTENT     */
+/* ================== */
+.content {
+    flex: 1; /* Content takes up the remaining space */
+    padding: 3rem;
+    max-width: 800px;
+}
+.content section {
+    margin-bottom: 3rem;
+    padding-top: 1rem; /* Offset for sticky nav */
+}
+.content h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
 
-/* --- FOOTER --- */
-.main-footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-secondary);
+/* Interest list styling */
+#interests ul {
+    list-style: none;
+    padding: 0;
+}
+#interests li {
+    margin-bottom: 0.5rem;
+}
+
+/* Education timeline styling */
+.timeline .entry {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.timeline .entry .title {
+    font-weight: 700;
+    flex-basis: 30%;
+}
+.timeline .entry .details {
+    flex-basis: 70%;
+    color: var(--secondary-text);
+}
+.timeline .entry .details p {
+    margin: 0;
+}
+.timeline .entry .details .date {
     font-size: 0.9rem;
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 600px) {
-    .page-wrapper { padding: 2rem 1rem; }
-    .about-container { flex-direction: column; }
-    .experience-item { grid-template-columns: 1fr; }
-    .experience-item .year { margin-bottom: 0.25rem; }
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+/* ================== */
+/* RESPONSIVE DESIGN  */
+/* ================== */
+@media (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex: 0 0 auto; /* Reset flex property */
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content {
+        padding: 2rem;
+    }
 }
